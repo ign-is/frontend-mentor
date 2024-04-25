@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {  
+    /*  Primary */
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    /* Neutral */
+    --bg-main: hsl(217, 54%, 11%);
+    --bg-card: hsl(215, 51%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+    --gray: rgba(255, 255, 255, 0.5);
+    --font: "Outfit", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--bg-main);
+    font-family: var(--font);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 375px;
+    max-width: 1440px;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 384px;
+    height: 604px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    padding-top: 25px;
+    box-shadow: 0px 10px 7px 22px rgba(19, 19, 38, 0.3);
+    box-shadow: 0px 10px 7px 22px rgba(19, 19, 38, 0.3),0px -24px 7px 22px rgba(19, 19, 38, 0.3);
+    margin-top: 30px;
+    margin-bottom: 42px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.card {
+    width: 350px;
+    height: 595px;
+    border-radius: 12px;
+    background-color: var(--bg-card);
+    color: var(--gray);
+    padding: 25px;
+    position: relative;
+    top: -52px;
+}
+
+.card > .image,
+.card > .image .eye-hover {
+    width: 300px;
+    height: 300px;
+    border-radius: 9px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.card > .image .nft-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 9px;
+}
+
+.card > .image .eye-hover {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 255, 247, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 160ms ease-in;
+    opacity: 0;
+}
+
+.card > .image .eye-hover:hover {
+    opacity: 1;
+}
+
+.card h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--white);
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all 160ms ease-in;
+}
+
+.card h1:hover {
+    color: var(--cyan);
+}
+
+.card > p {
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.price-days {
+    max-height: 1rem;
+    padding-bottom: 37px;
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price-days img {
+    width: 1rem;
+    height: 1rem;
+    object-fit: contain;
+}
+
+.eth,
+.days-left {
+    display: flex;
+    height: 1rem;
+}
+
+.eth img,
+.days-left img {
+    margin-top: 2px;
+    margin-right: 3px;
+}
+
+.days-left img {
+    margin-right: 6px;
+}
+
+.price {
+    font-weight: 600;
+    color: var(--cyan);
+}
+
+.avatar-name {
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.avatar-name img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+    margin-right: 18px;
+}
+
+.creation-name > span {
+    color: var(--white);
+    transition: all 160ms ease-in;
+}
+
+.creation-name > span:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.attribution {
+    font-size: 11px; text-align: center; 
+    color: var(--white);
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
