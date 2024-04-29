@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /* ### Primary */
+
+    --light-red: #ff5757;
+    --orangey-yellow: #ffb01f;
+    --green-teal: #00bd91;
+    --cobalt-blue: #1125d4;
+
+    /* ### Primary Transparency */
+    --light-red-alpha: hsla(0, 100%, 67%, 0.07);
+    --orangey-yellow-alpha: hsla(39, 100%, 56%, 0.07);
+    --green-teal-alpha: hsla(166, 100%, 37%, 0.07);
+    --cobalt-blue-alpha: hsla(234, 85%, 45%, 0.07);
+
+    /* ## Gradients */
+
+    --light-slate-blue-background: #7857ff;
+    --light-royal-blue-background: #2e2be9;
+
+    --violet-blue-circle: #4e21ca;
+    --persian-blue-circle: #2421ca00;
+
+    /* ### Neutral */
+
+    --white: #ffffff;
+    --pale-blue: #ebf1ff;
+    --light-lavender: #c8c7ff;
+    --dark-gray-blue: #303b5a;
+
+    /* ### Font */
+    --font: "Hanken Grotesk", sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 18px;
+    font-family: var(--font);
+    background-color: var(--white);
+}
+
+span {
+    font-family: var(--font);
+}
+
+.container {
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    width: 738px;
+    height: 512px; 
+    border-radius: 36px;
+    box-shadow: 0px 7px 30px 0px rgba(46, 43, 233, 0.2);
+    margin-bottom: 40px;
+}
+
+.result {
+    width: 50%;
+    height: 100%;
+    color: var(--white);
+    background-image: linear-gradient(180deg, var(--light-slate-blue-background), var(--light-royal-blue-background));
+    text-align: center;
+    border-radius: 36px;
+    padding: 47px 42px;
+}
+
+.result h2 {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--light-lavender);
+    margin-bottom: 34px;
+}
+
+.circle-result {
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(180deg,  var(--violet-blue-circle), var(--persian-blue-circle));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.circle-result > h1 {
+    font-size: 4.2rem;
+}
+
+.result > h1 {
+    font-size: 1.7rem;
+    color: var(--white);
+    margin-bottom: 16px;
+}
+
+.result p {
+    color: var(--light-lavender);
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.summary {
+    width: 50%;
+    height: 100%;
+    padding: 47px 42px;
+    color: var(--dark-gray-blue);
+}
+
+.summary h2 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style: none
+}
+
+li {
+    height: 55px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 11px;
+    padding-left: 18px;
+    padding-right: 18px;
+    margin-bottom: 17px;
+}
+
+li div {
+    display: flex;
+    align-items: center;
+}
+
+li div img {
+    margin-right: 12px;
+}
+
+li div > p {
+    font-weight: 500;
+}
+
+.reaction {
+    background-color: var(--light-red-alpha);
+}
+
+.memory {
+    background-color: var(--orangey-yellow-alpha);
+}
+
+.verbal {
+    background-color: var(--green-teal-alpha);
+}
+
+.visual {
+    background-color: var(--cobalt-blue-alpha);
+}
+
+.reaction div > p {
+    color: var(--light-red);
+}
+
+.memory div > p {
+    color: var(--orangey-yellow);
+}
+
+.verbal div > p {
+    color: var(--green-teal);
+}
+
+.visual div > p {
+    color: var(--cobalt-blue);
+}
+
+.bold {
+    font-weight: 700;
+    margin-right: 7px;
+}
+
+.number > span:last-of-type {
+    color: rgba(0, 0, 0, 0.4);
+    font-weight: 700;
+}
+
+.btn {
+    margin-top: 25px;
+    width: 100%;
+    height: 56px;
+    border-radius: 28px;
+    border: none;
+    background-color: var(--dark-gray-blue);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 180ms ease-in;
+}
+
+.btn:hover {
+    background-image: linear-gradient(180deg, var(--light-slate-blue-background), var(--light-royal-blue-background));
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
