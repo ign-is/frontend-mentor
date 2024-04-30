@@ -2,32 +2,30 @@
 
 :root {
     /* ### Primary */
-
-    --light-red: #ff5757;
-    --orangey-yellow: #ffb01f;
-    --green-teal: #00bd91;
-    --cobalt-blue: #1125d4;
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
 
     /* ### Primary Transparency */
     --light-red-alpha: hsla(0, 100%, 67%, 0.07);
     --orangey-yellow-alpha: hsla(39, 100%, 56%, 0.07);
     --green-teal-alpha: hsla(166, 100%, 37%, 0.07);
     --cobalt-blue-alpha: hsla(234, 85%, 45%, 0.07);
-
+    --white-alpha: hsla(0, 0%, 100%, 0.4);
+   
     /* ## Gradients */
+    --light-slate-blue-background: hsl(252, 100%, 67%);
+    --light-royal-blue-background: hsl(241, 81%, 54%);
 
-    --light-slate-blue-background: #7857ff;
-    --light-royal-blue-background: #2e2be9;
-
-    --violet-blue-circle: #4e21ca;
-    --persian-blue-circle: #2421ca00;
+    --violet-blue-circle: hsl(256, 72%, 46%);
+    --persian-blue-circle: hsla(241, 72%, 46%, 0);
 
     /* ### Neutral */
-
-    --white: #ffffff;
-    --pale-blue: #ebf1ff;
-    --light-lavender: #c8c7ff;
-    --dark-gray-blue: #303b5a;
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(222, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
 
     /* ### Font */
     --font: "Hanken Grotesk", sans-serif;
@@ -98,6 +96,12 @@ span {
 
 .circle-result > h1 {
     font-size: 4.2rem;
+    font-weight: 800;
+}
+
+.hundred {
+    font-weight: 500;
+    color: var(--white-alpha);
 }
 
 .result > h1 {
@@ -220,4 +224,71 @@ li div > p {
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 748px) {
+
+    body {
+        height: fit-content;
+    }
+
+    .container {
+        width: 375px;
+        height: 809px;
+        flex-direction: column;
+    }
+
+    .result {
+        width: 100%;
+        height: 355px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        padding: 20px 0px 38px 0px;
+    }
+    .result h2 {
+        font-size: 1.1rem;
+        margin-bottom: 22px;
+    }
+
+    .circle-result {
+        width: 140px;
+        height: 140px;
+        margin-bottom: 24px;
+    } 
+
+    .circle-result > h1 {
+        font-size: 3.5rem;
+    }
+
+    .hundred {
+        margin-top: -5px;
+    }
+
+    .result > h1 {
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+    }
+
+    .result p {
+        font-size: 0.9rem;
+        width: 258px;
+    }
+
+    .summary {
+        width: 100%;
+        padding: 24px 30px;
+    }
+
+    .summary h2 {
+        font-size: 1.1rem;
+        margin-bottom: 24px;
+    }
+
+    li div > p {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        margin-top: 7px;
+    }
 }
