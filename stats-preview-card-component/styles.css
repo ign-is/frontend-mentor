@@ -12,7 +12,7 @@
     --white-stat-headings: hsla(0, 0%, 100%, 0.6);
 
     /* ### Fonts */
-    --font-lexed: "Lexend Deca", sans-serif;
+    --font-lexend: "Lexend Deca", sans-serif;
     --font-inter: "Inter", sans-serif;
 }
 
@@ -31,6 +31,7 @@ body {
     justify-content: center;
     flex-direction: column;
     font-family: var(--font-inter);
+    min-width: 375px;
 }
 
 section {
@@ -53,10 +54,10 @@ section {
 
 h1 {
     font-size: 2.2rem;
-    margin-bottom: 20px;
+    margin-bottom: 26px;
 }
 
-h1, li h3 {
+h1, li h2 {
     color: var(--white);
 }
 
@@ -64,9 +65,11 @@ h1 span {
     color: var(--soft-violet);
 }
 
-.left p {
-    line-height: 24px;
-    margin-bottom: 65px;
+.left > p {
+    line-height: 26px;
+    margin-bottom: 72px;
+    width: 350px;
+    color: var(--white-main-paragraph);
 }
 
 ul {
@@ -80,16 +83,17 @@ li {
     text-align: left;
 }
 
-li p, p {
-    color: var(--white-main-paragraph);
-    /* font-family: var(--font-inter); */
-    /* font-family: var(--font-lexed); */
+li h2 {
+    font-weight: 600;
+    margin-bottom: 8px;
 }
 
 li p {
     text-transform: uppercase;
     font-weight: 400;
-    font-family: var(--font-lexed);
+    color: var(--white-stat-headings);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
 }
 
 .right {
@@ -101,6 +105,7 @@ li p {
 img {
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
+    filter: contrast(50%);
 }
 
 .img-desktop {
@@ -113,19 +118,21 @@ img {
     display: none;
 }
 
-/* .violet-filter {
+.overlay {
     position: absolute;
     left: 0;
     top: 0;
-    z-index: 2;
-    background-color: hsla(277, 64%, 61%, 0.9);
-    opacity: 0.5;
+    background-color: var(--soft-violet);
+    opacity: 0.6;
     width: 540px;
     height: 445px;
-} */
+    mix-blend-mode: color-burn;
+}
 
 .attribution { 
-    font-size: 11px; text-align: center; 
+    font-size: 11px; 
+    text-align: center;
+    color: var(--white-main-paragraph); 
 }
 
 .attribution a { 
@@ -148,17 +155,19 @@ img {
     .left {
         height: 540px;
         width: 330px;
-        padding: 35px;
+        padding: 38px 33px;
         border-top-left-radius: 0px;
         border-bottom-right-radius: 8px;
     }
 
     h1 {
-        font-size: 1.7rem;
+        font-size: 1.75rem;
+        margin-bottom: 16px;
     }
 
     .left p {
         margin-bottom: 40px;
+        width: 264px;
     }
 
     ul {
@@ -168,6 +177,11 @@ img {
 
     li {
         text-align: center;
+        height: 80px;
+    }
+
+    li h2 {
+        margin-bottom: 5px;
     }
 
     .right {
@@ -184,5 +198,10 @@ img {
         height: 240px;
         width: 100%;
         border-radius: 8px 8px 0px 0px;
+    }
+
+    .overlay {
+        width: 330px;
+        height: 240px;
     }
 }
