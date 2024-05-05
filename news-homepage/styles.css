@@ -29,6 +29,7 @@ body {
     justify-content: center;
     flex-direction: column;
     background-color: var(--off-white);
+    min-width: 375px;
 }
 
 .container {
@@ -54,6 +55,10 @@ nav ul {
     align-items: center;
     column-gap: 35px;
     list-style: none;
+}
+
+.menu-icon {
+    display: none;
 }
 
 a {
@@ -93,6 +98,10 @@ p {
 
 img {
     object-fit: cover;
+}
+
+.img-mobile {
+    display: none;
 }
 
 .title-read {
@@ -254,4 +263,150 @@ section article .right p {
 .attribution a { 
     color: hsl(228, 45%, 44%); 
 }
+
+@media screen and (max-width: 1130px) {
+
+    nav {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .container,
+    main {
+        width: 750px;
+    }
+
+
+    main {
+        grid-template-columns: 750px;
+        gap: 0px;
+        grid-template-areas: "article"
+                             "aside"
+                             "section";
+
+    }
+
+    main > article {
+        margin-bottom: 40px;
+    }
+
+    .title-read .right {
+        margin-right: 0px;
+    }
+
+    section {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 30px;
+        margin-top: 40px;
+    }
+
+    section article:last-of-type {
+        margin-left: 50%;
+        margin-right: 50%;
+    }
+
+}
+
+@media screen and (max-width: 770px) {
+
+    .container,
+    main {
+        width: 375px;
+    }
+
+    nav {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    nav img {
+        width: 48px;
+        height: 30px;
+    }
+
+    .menu-icon {
+        display: block;
+        width: 42px;
+        height: 18px;
+        cursor: pointer;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    main {
+        grid-template-columns: 375px;
+        margin-left: 17px;
+        margin-right: 17px;
+    }
+
+    main > article {
+        height: 654px;
+        margin-bottom: 64px;
+    }
+
+    .img-desktop {
+        display: none;
+    }
+
+    .img-mobile {
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    .title-read {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .title-read .left {
+        width: 400px;
+    }
+
+    .title-read .left h1 {
+        font-size: 3.1rem;
+        line-height: 48px;
+    }
+
+    .title-read .right {
+        width: 344px;
+    }
+
+    .title-read .right p {
+        width: 100%;
+    }
+
+    .btn-read {
+        margin-top: 30px;
+    }
+
+    section {
+        grid-template-columns: 1fr;
+    }
+
+    section article:last-of-type {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    aside {
+        height: 488px;
+        margin-bottom: 65px;
+    }
+
+    aside h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        margin-top: 0px;
+    }
+
+    section article img {
+        height: 130px;
+        width: 100px;
+    }
+}
+
 
