@@ -4,7 +4,6 @@
     /* ### Primary */
     --lime-green: hsl(163, 72%, 41%);
     --bright-red: hsl(356, 69%, 56%);
-
     --facebook: hsl(208, 92%, 53%);
     --twitter: hsl(203, 89%, 53%);
     --instagram: linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
@@ -15,8 +14,6 @@
 
     /* #### Light Theme */
     --toggle-slider: hsl(230, 22%, 74%);
-
-    /* ### Neutral */
 
     /* #### Dark Theme */
     --very-dark-blue-bg: hsl(230, 17%, 14%);
@@ -31,6 +28,8 @@
     --light-grayish-blue-card-bg: hsl(227, 47%, 96%);
     --dark-grayish-blue-text: hsl(228, 12%, 44%);
     --very-dark-blue-text: hsl(230, 17%, 14%);
+
+    /* ### Font */
     --font-inter: "Inter", sans-serif;
 }
 
@@ -54,9 +53,11 @@ body {
 
 header {
     width: 100vw;
-    padding-top: 40px;
+    padding-top: 30px;
     padding-bottom: 152px;
     background-color: var(--very-pale-blue-top-bg-pattern);
+    border-bottom-left-radius: 26px;
+    border-bottom-right-radius: 26px;
 }
 
 .header-container {
@@ -73,7 +74,7 @@ header .dark-toggle {
 
 header .dark-toggle h4 {
     font-size: 0.8rem;
-    color: var(--dark-grayish-blue-text);
+    color: var(--desaturated-blue-text);
 }
 
 .title-total h1 {
@@ -101,6 +102,8 @@ header .dark-toggle h4 {
     height: 215px;
     border-radius: 6px;
     position: relative;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
 }
 
 .inner-box {
@@ -193,6 +196,8 @@ header .dark-toggle h4 {
 .bottom-grid .box {
     width: 255px;
     height: 125px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
     background-color: var(--light-grayish-blue-card-bg);
     display: flex;
     justify-content: space-between;
@@ -236,7 +241,7 @@ header .dark-toggle h4 {
 }
 
 
-/* switch dark mode */
+/* ### Switch Dark Mode */
 .switch {
     position: relative;
     display: inline-block;
@@ -266,20 +271,17 @@ header .dark-toggle h4 {
 .slider:before {
     position: absolute;
     content: "";
-    /* height: 26px;
-    width: 26px; */
     height: 20px;
     width: 20px;
-    left: 4px;
+    right: 4px;
     bottom: 3px;
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
 }
-/* TOGGLE REVERSE */
+
 input:checked + .slider,
 input:hover + .slider {
-    /* background-color: #2196F3; */
     background-image: var(--toggle);
 }
   
@@ -288,9 +290,13 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-    -webkit-transform: translateX(22px);
-    -ms-transform: translateX(22px);
-    transform: translateX(22px);
+    background-color: var(--dark-desaturated-blue-card-bg);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(-22px);
+    -ms-transform: translateX(-22px);
+    transform: translateX(-22px)
 }
 
 .slider.round {
@@ -301,10 +307,11 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
-/* end swtich dark mode */
+/* ### End Swtich Dark Mode */
 
 .attribution { 
     font-size: 11px; text-align: center; 
+    margin-top: 10px;
 }
 
 .attribution a { 
@@ -318,6 +325,8 @@ input:checked + .slider:before {
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        padding-left: 0; padding-right: 0;
+        overflow-x: hidden;
     }
 
     .container,
@@ -345,23 +354,21 @@ input:checked + .slider:before {
         border-bottom: 1px solid var(--dark-grayish-blue-text);
     }
 
-    /* header .dark-toggle { */
-        /* width: 100%; */
-        /* justify-content: space-between; */
-    /* } */
-
     .top-grid,
     .bottom-grid {
         grid-template-columns: repeat(2, 1fr);
-        /* margin: -100px 14px 0px 14px; */
-        /* column-gap: 44px; */
         row-gap: 25px;
         margin-bottom: 30px;
+    }
+
+    .attribution {
+        margin-top: 0px;
     }
 
 }
 
 @media screen and (max-width: 605px) {
+
     .container,
     .header-container {
         width: 325px;
@@ -370,8 +377,6 @@ input:checked + .slider:before {
 
     header {
         width: 375px;
-        border-bottom-left-radius: 26px;
-        border-bottom-right-radius: 26px;
         padding-bottom: 79px;
     }
 
@@ -401,4 +406,5 @@ input:checked + .slider:before {
     .bottom-grid .box  {
         width: 325px;
     }
+
 }
