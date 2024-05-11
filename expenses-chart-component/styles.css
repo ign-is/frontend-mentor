@@ -48,7 +48,7 @@ body {
 .balance {
     width: 100%;
     height: 125px;
-    border-radius: 20px;
+    border-radius: 17px;
     background-color: var(--soft-red);
     color: var(--very-pale-orange);
     display: flex;
@@ -74,7 +74,7 @@ body {
 .spending {
     width: 100%;
     height: 512px;
-    border-radius: 20px;
+    border-radius: 17px;
     background-color: var(--very-pale-orange);
     color: var(--dark-brown);
     padding: 30px 40px 40px 40px;
@@ -182,6 +182,7 @@ li:nth-of-type(3) > .bar:hover {
 
 .total .left h1 {
     font-size: 2.9rem;
+    margin-bottom: -12px;
 }
 
 .total .right {
@@ -204,5 +205,90 @@ li:nth-of-type(3) > .bar:hover {
 
 .attribution a { 
     color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 560px) {
+
+    .container {
+        width: 344px;
+        height: 535px;
+    }
+
+    .balance {
+        height: 98px;
+        padding: 22px 24px 20px 20px;
+        border-radius: 12px;
+    }
+
+    .balance > .left {
+        column-gap: 0px;
+    }
+
+    .balance .left p {
+        font-size: 0.9rem;
+    }
+
+    .balance .left h1 {
+        font-size: 1.5rem;
+    }
+
+    .balance img {
+        height: 40px;
+        width: 62px;
+    }
+
+    .spending {
+        padding: 27px 20px 18px 20px;
+        height: 420px;
+        border-radius: 12px;
+    }
+
+    .spending h1 {
+        font-size: 1.53rem;
+    }
+
+    .graph {
+        width: 304px;
+        margin-bottom: 12px;
+    }
+
+    .amount {
+        width: 55px;
+        height: 30px;
+        font-size: 0.8rem;
+        top: -30px;
+    }
+
+    .bar {
+        width: 32px;
+    }
+
+    .day {
+        font-size: 0.7rem;
+    }
+
+    .total {
+        padding-top: 26px;
+        height: 82px;
+    }
+
+    .total .left h1 {
+        font-size: 1.9rem;
+        margin-bottom: 6px;
+    }
+
+    .total .right {
+        margin-top: 0px;
+    }
+    
+    .total .left p,
+    .total .right p {
+        font-size: 0.9rem;
+    }
+
+    .total .right h4 {
+        font-size: 1rem;
+    }
+
 }
 
