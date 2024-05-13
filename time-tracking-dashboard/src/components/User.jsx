@@ -13,18 +13,21 @@ const User = ({handleTime, timeFrame}) => {
             </div>
             <ul className="time">
                 <li 
+                    className={timeFrame[0] === 'daily' ? 'clicked' : ''}
                     onClick={() => handleTime('daily')} 
-                    style={timeFrame[0] === 'daily' ? {color: 'white'} : {color: '#bdc1ff'}}>
+                >
                     Daily
                 </li>
                 <li 
+                    className={timeFrame[0] === 'weekly' ? 'clicked' : ''}
                     onClick={() => handleTime('weekly')} 
-                    style={timeFrame[0] === 'weekly' ? {color: 'white'} : {color: '#bdc1ff'}}>
+                >
                     Weekly
                 </li>
                 <li 
-                    onClick={() => handleTime('monthly')} 
-                    style={timeFrame[0] === 'monthly' ? {color: 'white'} : {color: '#bdc1ff'}}>
+                    className={timeFrame[0] === 'monthly' ? 'clicked' : ''}
+                    onClick={() => handleTime('monthly')}     
+                >
                     Monthly
                 </li>
             </ul>

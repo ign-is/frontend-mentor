@@ -105,6 +105,11 @@ li:hover {
     color: var(--white);
 }
 
+.clicked {
+    color: white;
+}
+
+
 .box {
     width: 255px;
     height: 245px;
@@ -150,11 +155,11 @@ li:hover {
 }
 
 .elipsis {
-    transition: all 120ms ease-in;
+    cursor: pointer;
 }
 
 .elipsis:hover {
-    fill: var(--white);
+    filter: brightness(0) saturate(100%) invert(1);
 }
 
 .current {
