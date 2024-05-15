@@ -37,11 +37,7 @@
 
 body {
     font-family: var(--font-ubuntu);
-}
-
-.container {
-    width: 1440px;
-    height: fit-content;
+    overflow-x: hidden;
 }
 
 header {
@@ -208,6 +204,107 @@ span {
 }
 
 
+/* Section Design Future*/
+.design-future {
+    width: 1114px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: visible;
+    color: var(--very-dark-blue-headings);
+    margin-bottom: 158px;
+}
+
+.design-future h1 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 2.1rem;
+    margin-top: 145px;
+    margin-bottom: 110px;
+}
+
+.text-image {
+    display: flex;
+    overflow-x: visible;
+    position: relative;
+}
+
+.text-image .text {
+    width: 536px;
+}
+
+.text-image .text h3 {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.text-image .text p:first-of-type {
+    margin-bottom: 75px;
+}
+
+.text-image .text p {
+    line-height: 30px;
+    margin-top: 28px;
+}
+
+.text-image > img {
+    width: 100%;
+    max-width: 885px;
+    height: auto;
+    position: absolute;
+    top: -230px;
+    right: -440px;
+}
+
+/* Section Art Infrastructure */
+.art-infra {
+    width: 100vw;
+    height: 400px;
+    background-image: linear-gradient(90deg, var(--very-dark-gray-blue), var(--very-dark-desaturated-blue));
+    overflow-y: hidden;
+    border-bottom-left-radius: 100px;
+    border-top-right-radius: 100px;
+    position: relative;
+}
+
+.phones-container {
+    width: 1114px;
+    height: 579px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -510px;
+    z-index: 3;
+    display: flex;
+}
+
+.phones-container .text-right {
+    padding-top: 160px;
+    padding-left: 70px;
+    color: var(--white-text);
+}
+
+.phones-container .text-right h1 {
+    font-weight: 400;
+    font-size: 2.2rem;
+    margin-bottom: 34px;
+}
+
+.phones-container .text-right p {
+    font-weight: 300;
+    line-height: 30px;
+    width: 528px;
+}
+
+.phones {
+    margin-left: -50px;
+}
+
+.circle {
+    position: absolute;
+    top: -500px;
+    left: -200px;
+    z-index: 0;
+}
 
 
 
@@ -216,7 +313,10 @@ span {
 
 
 
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
 
-
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
