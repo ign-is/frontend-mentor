@@ -9,6 +9,7 @@
     /* ### Neutral */
     --white-text: hsl(0, 0%, 100%);
     --white-text-opacity: rgba(255, 255, 255, 0.75);
+
     /* --white-text-opacity:  */
     --grayish-blue-footer-text: hsl(240, 2%, 79%);
     --very-dark-grayish-blue-body-copy: hsl(207, 13%, 34%);
@@ -96,11 +97,12 @@ nav .left ul {
 
 nav .left ul li {
     color: var(--white-text-opacity);
+    cursor: pointer;
 }
 
 /* nav .left ul li:hover {
     color: var(--white-text);
-    border-bottom: 1px solid var(--white-text);
+    text-decoration: ;
 } */
 
 nav .right {
@@ -139,7 +141,6 @@ span {
     background-color: rgba(255, 255, 255, 0.5);
     color: var(--white-text);
 }
-
 
 .header-center {
     text-align: center;
@@ -203,9 +204,10 @@ span {
     color: var(--very-light-red-CTA-hover-background);
 }
 
-
 /* Section Design Future*/
-.design-future {
+
+.design-future,
+.free-powerfull {
     width: 1114px;
     margin-left: auto;
     margin-right: auto;
@@ -256,6 +258,7 @@ span {
 }
 
 /* Section Art Infrastructure */
+
 .art-infra {
     width: 100vw;
     height: 400px;
@@ -306,15 +309,78 @@ span {
     z-index: 0;
 }
 
+/* ### Section Free Powerfull */
 
+.free-powerfull {
+    margin-top: 118px;
+    margin-bottom: 300px;
+}
 
+.free-powerfull .text-image {
+    flex-direction: row-reverse;
+    padding-top: 150px;
+}
 
+.free-powerfull .text-image p {
+    width: 516px;
+}
 
+.free-powerfull > .text-image > img {
+    width: 100%;
+    max-width: 885px;
+    height: auto;
+    position: absolute;
+    top: 0px;
+    left: -415px;
+}
 
+/* ### Footer */
 
+footer {
+    height: 350px;
+    background-color: var(--very-dark-black-blue-footer-background);
+    border-top-right-radius: 100px;
+}
+
+.footer-container {
+    width: 1114px;
+    height: 362px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    column-gap: 180px;
+    padding-top: 65px;
+}
+
+.footer-container img {
+    width: 101px;
+    height: 40px;
+}
+
+.footer-container ul {
+    list-style: none;
+}
+
+.footer-container ul li {
+    margin-bottom: 16px;
+    color: var(--grayish-blue-footer-text);
+}
+
+.footer-container ul li:not(:first-child):hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.footer-container ul li:first-of-type {
+    color: var(--white-text);
+    font-weight: 500;
+    margin-bottom: 35px;
+}
 
 .attribution { 
     font-size: 11px; text-align: center; 
+    background-color: var(--very-dark-black-blue-footer-background);
+    color: var(--grayish-blue-footer-text);
 }
 
 .attribution a { 
