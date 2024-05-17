@@ -8,7 +8,7 @@
 
     /* ### Neutral */
     --white-text: hsl(0, 0%, 100%);
-    --white-text-opacity: rgba(255, 255, 255, 0.75);
+    --white-text-opacity: hsla(0, 0%, 100%, 0.749);
 
     /* --white-text-opacity:  */
     --grayish-blue-footer-text: hsl(240, 2%, 79%);
@@ -39,10 +39,11 @@
 body {
     font-family: var(--font-ubuntu);
     overflow-x: hidden;
+    min-width: 375px;
 }
 
 header {
-    width: 100%;
+    width: 100vw;
     height: 600px;
     background-image: linear-gradient(90deg, var(--very-light-red), var(--light-red));
     border-bottom-left-radius: 100px; 
@@ -98,17 +99,51 @@ nav .left ul {
 nav .left ul li {
     color: var(--white-text-opacity);
     cursor: pointer;
+    position: relative;
 }
 
-/* nav .left ul li:hover {
+nav .left ul li:hover span {
     color: var(--white-text);
-    text-decoration: ;
-} */
+    text-decoration: underline;
+}
 
 nav .right {
     display: flex;
     align-items: center;
     column-gap: 30px;
+}
+
+.icon-hamburger {
+    display: none;
+}
+
+/* Dropdown */
+
+nav .left ul li > ul {
+    background-color: var(--white-text);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 50px 30px 24px;
+    border-radius: 6px;
+    position: absolute;
+    top: 34px;
+    left: -24px;
+    display: none;
+}
+
+nav .left ul li > ul li {
+    color: black;
+    margin-bottom: 20px;
+}
+
+nav .left ul li > ul li:last-of-type {
+    margin-bottom: 0px;
+}
+
+nav .left ul li > ul li:hover {
+    font-weight: 600;
 }
 
 button {
@@ -246,6 +281,11 @@ span {
 .text-image .text p {
     line-height: 30px;
     margin-top: 28px;
+    color: var(--very-dark-grayish-blue-body-copy);
+}
+
+.illustration-mobile {
+    display: none;
 }
 
 .text-image > img {
@@ -334,6 +374,10 @@ span {
     left: -415px;
 }
 
+.laptop-mobile {
+    display: none;
+}
+
 /* ### Footer */
 
 footer {
@@ -386,3 +430,4 @@ footer {
 .attribution a { 
     color: hsl(228, 45%, 44%); 
 }
+
