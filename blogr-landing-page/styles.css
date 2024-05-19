@@ -531,3 +531,152 @@ footer {
     }
 }
 
+@media screen and (max-width: 768px) {
+
+    header {
+        min-width: 375px;
+        /* width: 375px; */
+       display: flex;
+       align-items: center;
+       justify-content: center;
+    }
+
+    .header-container {
+        width: 327px;
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+    .icon-hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    nav .left {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    nav .left ul, nav .right {
+        display: none;
+    }
+
+    .header-center h1 {
+        margin-top: 105px;
+        font-size: 2rem;
+        line-height: 42px;
+        /* width: 300px; */
+        width: 300px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .header-center p {
+        font-size: 1.1rem;
+        width: 300px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    header > img {
+        max-width: 1250px;
+        top: -230px;
+        right: -600px;
+    }
+
+    .design-future,
+    .free-powerfull {
+        width: 375px;
+    }
+
+    .design-future {
+        margin-bottom: 80px;
+    }
+
+    .design-future h1 {
+        font-size: 1.5rem;
+        margin-top: 100px;
+        margin-bottom: 42px;
+    }
+
+    .text-image .text {
+        width: 375px;
+    }
+
+    .text-image .text h3 {
+        font-size: 1.5rem;
+        width: 228px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .text-image .text h3:first-of-type {
+        margin-top: 45px;   
+    }
+
+    .text-image .text p {
+        margin-top: 20px;
+        margin-left: 32px;
+        margin-right: 32px;
+    }
+
+    .text-image .text p:first-of-type {
+        margin-bottom: 44px;
+    }
+
+    .free-powerfull {
+        margin-top: 60px;
+        margin-bottom: 95px;
+    }
+
+    .free-powerfull .text-image p {
+        width: 311px;
+    }
+
+    .free-powerfull .text-image {
+        overflow-x: hidden;
+    }
+
+    .free-powerfull > .text-image > img {
+        width: 500px;
+    }
+
+    .phones-container {
+        width: 375px;
+        margin-bottom: -400px;
+    }
+
+    .phones-container > img {
+        width: 375px;
+    }
+
+    .phones-container .text-right {
+        width: 375px;
+    }
+
+    .phones-container .text-right h1 {
+        line-height: 45px;
+    }
+
+    .phones-container .text-right p {
+        width: 311px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .art-infra > img {
+        width: 600px;
+        top: -240px;
+        left: -110px;
+    }
+
+    footer {
+        height: 890px;
+    }
+
+    .footer-container {
+        height: 890px;
+        width: 375px;
+        text-align: center;
+    }
+}
