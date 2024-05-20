@@ -9,8 +9,8 @@
     /* ### Neutral */
     --white-text: hsl(0, 0%, 100%);
     --white-text-opacity: hsla(0, 0%, 100%, 0.749);
+    --menu-mobile: hsl(240, 7%, 94%);
 
-    /* --white-text-opacity:  */
     --grayish-blue-footer-text: hsl(240, 2%, 79%);
     --very-dark-grayish-blue-body-copy: hsl(207, 13%, 34%);
     --very-dark-black-blue-footer-background: hsl(240, 10%, 16%);
@@ -117,7 +117,7 @@ nav .right {
     display: none;
 }
 
-/* Dropdown */
+/* ### Dropdown */
 
 nav .left ul li > ul {
     background-color: var(--white-text);
@@ -239,7 +239,73 @@ span {
     color: var(--very-light-red-CTA-hover-background);
 }
 
-/* Section Design Future*/
+/* ### Mobile Menu */
+
+.mobile-menu {
+    width: 327px;
+    background-color: var(--white-text);
+    padding: 15px 24px;
+    border-radius: 6px;
+    position: absolute;
+    left: 0; 
+    right: -16px; 
+    top: -350px;
+    margin-left: auto; 
+    margin-right: auto; 
+    z-index: 5;
+    transition: all 200ms ease-in;
+}
+
+.mobile-menu ul {
+    text-align: center;
+    list-style: none;
+}
+
+.mobile-menu ul li {
+    color: var(--very-dark-blue-headings);
+    cursor: pointer;
+}
+
+.mobile-menu > ul:first-of-type > li {
+    padding: 15px 0px;
+}
+
+.mobile-menu ul li > ul {
+    width: 100%;
+    background-color: var(--menu-mobile);
+    color: var(--very-dark-grayish-blue-body-copy);
+    padding: 12px 0px;
+    border-radius: 6px;
+    margin-top: 10px;
+    display: none;
+}
+
+.mobile-menu ul li > ul li {
+    padding: 10px;
+}
+
+.mobile-menu .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 15px;
+    padding-top: 30px;
+    border-top: 1px solid var(--grayish-blue-footer-text);
+    width: 100%;
+}
+
+.mobile-menu .bottom .btn-log {
+    color: var(--very-dark-blue-headings);
+    margin-bottom: 18px;
+}
+
+.mobile-menu .bottom .btn-sign {
+    color: var(--white-text);
+    background-image: linear-gradient(90deg, var(--very-light-red), var(--light-red));
+}
+
+/* ### Section Design Future*/
 
 .design-future,
 .free-powerfull {
@@ -297,7 +363,7 @@ span {
     right: -440px;
 }
 
-/* Section Art Infrastructure */
+/* ### Section Art Infrastructure */
 
 .art-infra {
     width: 100vw;
@@ -481,7 +547,6 @@ footer {
         padding-top: 0px;
         padding-left: 0px;
         text-align: center;
-        /* width: 768px; */
     }
 
     .phones {
@@ -535,10 +600,9 @@ footer {
 
     header {
         min-width: 375px;
-        /* width: 375px; */
-       display: flex;
-       align-items: center;
-       justify-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .header-container {
@@ -565,7 +629,6 @@ footer {
         margin-top: 105px;
         font-size: 2rem;
         line-height: 42px;
-        /* width: 300px; */
         width: 300px;
         margin-right: auto;
         margin-left: auto;
