@@ -40,13 +40,12 @@ span {
     color: var(--charcoal-grey);
     border-radius: 30px;
     display: flex;
-    /* align-items: center; */
     justify-content: space-between;
     padding: 25px;
+    margin-bottom: 20px;
 }
 
 main {
-    /* width: 375px; */
     width: 412px;
     padding-left: 37px;
     padding-top: 70px;
@@ -121,7 +120,8 @@ input {
     color: var(--grey);
 }
 
-button {
+.btn-subscribe,
+.btn-dismiss {
     height: 55px;
     border: none;
     background-color: var(--dark-slate-grey);
@@ -133,14 +133,42 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.btn-subscribe:hover,
+.btn-dismiss:hover {
     background-image: linear-gradient(90deg, var(--pink), var(--tomato));
     box-shadow: 0px 10px 20px 0px rgba(255, 98, 87,0.3);
 }
 
+/* ### Success Message */
 
+.success-container {
+    width: 505px;
+    height: 522px;
+    border-radius: 30px;
+    background-color: var(--white);
+    padding: 47px 64px 64px 64px;
+    margin-bottom: 20px;
+    display: none;
+}
 
+.check {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 36px;
+}
 
+.success-container p {
+    display: inline;
+}
+
+.bold-email {
+    font-weight: 700;
+}
+
+.btn-dismiss {
+    width: 100%;
+    margin-top: 24px;
+}
 
 .attribution { 
     font-size: 11px; text-align: center; 
@@ -159,14 +187,14 @@ button:hover {
     .container {
         width: 375px;
         min-width: 375px;
-        height: fit-content;
+        height: 100vh;
         padding: 0px;
         flex-direction: column-reverse;
         border-radius: 0px;
+        margin-bottom: 0px;
     }
 
     main {
-        /* width: 326px; */
         width: 100%;
         padding-left: 24px;
         padding-right: 24px;
@@ -190,13 +218,33 @@ button:hover {
         display: none;
     }
 
-    button {
+    .btn-subscribe {
         margin-bottom: 40px;
     }
 
     .attribution {
         background-color: var(--white);
         width: 375px;
+    }
+
+    .success-container {
+        width: 375px;
+        height: 100vh;
+        border-radius: 0px;
+        padding: 148px 25px 40px 25px;
+        margin-bottom: 0px;
+    }
+
+    .success-container h1 {
+        padding-top: 0px;
+    }
+
+    .btn-dismiss {
+        margin-top: 183px;
+    }
+
+    .attribution {
+        display: none;
     }
 }
 
