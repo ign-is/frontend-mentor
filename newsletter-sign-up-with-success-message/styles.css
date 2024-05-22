@@ -142,6 +142,62 @@ button:hover {
 
 
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 950px) {
+
+    body {
+        height: fit-content;
+    }
+
+    .container {
+        width: 375px;
+        min-width: 375px;
+        height: fit-content;
+        padding: 0px;
+        flex-direction: column-reverse;
+        border-radius: 0px;
+    }
+
+    main {
+        /* width: 326px; */
+        width: 100%;
+        padding-left: 24px;
+        padding-right: 24px;
+        padding-top: 0px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        padding-top: 39px;
+    }
+
+    p {
+        align-items: flex-start;
+    }
+
+    .illustration-mobile {
+        display: block;
+    }
+
+    .illustration-desktop {
+        display: none;
+    }
+
+    button {
+        margin-bottom: 40px;
+    }
+
+    .attribution {
+        background-color: var(--white);
+        width: 375px;
+    }
+}
+
 
