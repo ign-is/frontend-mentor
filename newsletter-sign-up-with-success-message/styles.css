@@ -3,7 +3,7 @@
 :root {
     /* ### Primary */
     --tomato: hsl(4, 100%, 67%);
-    --tomato-opacity: hsla(4, 100%, 67%, 0.7);
+    --tomato-opacity: hsla(4, 100%, 67%, 0.1);
     --pink: hsl(347, 100%, 66%);
 
     /* ### Neutral */
@@ -27,6 +27,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    overflow: hidden;
 }
 
 span {
@@ -94,6 +95,7 @@ form > div {
 
 .error {
     color: var(--tomato);
+    display: none;
 }
 
 label {
@@ -112,6 +114,10 @@ input {
     border: 1px solid var(--grey);
     border-radius: 8px;
     
+}
+
+.input:focus {
+    outline-color: var(--dark-slate-grey);
 }
 
 ::placeholder {
@@ -134,7 +140,9 @@ input {
 }
 
 .btn-subscribe:hover,
-.btn-dismiss:hover {
+.btn-dismiss:hover,
+.btn-subscribe:focus,
+.btn-dismiss:focus {
     background-image: linear-gradient(90deg, var(--pink), var(--tomato));
     box-shadow: 0px 10px 20px 0px rgba(255, 98, 87,0.3);
 }
@@ -149,6 +157,7 @@ input {
     padding: 47px 64px 64px 64px;
     margin-bottom: 20px;
     display: none;
+    transition: all 200ms ease-out;
 }
 
 .check {
@@ -172,6 +181,7 @@ input {
 
 .attribution { 
     font-size: 11px; text-align: center; 
+    color: var(--white);
 }
 
 .attribution a { 
