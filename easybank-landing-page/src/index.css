@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-  /* ### Primary */
+  /* Primary */
 
  --dark-blue: hsl(233, 26%, 24%);
  --lime-green: hsl(136, 65%, 51%);
  --bright-cyan: hsl(192, 70%, 51%);
 
-  /* ### Neutral */
+  /* Neutral */
 
  --grayish-blue: hsl(233, 8%, 62%);
  --light-grayish-blue: hsl(220, 16%, 96%);
@@ -24,7 +24,7 @@
 body {
   font-family: "Public Sans", sans-serif;
   font-size: 18px;
-  background-color: red;
+  overflow: hidden;
 }
 
 span {
@@ -45,6 +45,8 @@ nav {
   width: 100vw;
   height: 80px;
   background-color: var(--white);
+  position: relative;
+  z-index: 3;
 }
 
 nav .container {
@@ -68,14 +70,17 @@ nav ul li {
   justify-content: center;
   position: relative;
   cursor: pointer;
+  font-size: 1rem;
+  transition: all 120ms ease-in-out;
 }
 
 nav ul li .border {
   height: 5px;
-  width: 100%;
+  width: 0%;
   position: absolute;
   bottom: 0px;
   left: 0px;
+  transition: all 120ms ease-in-out;
 }
 
 nav ul li:hover {
@@ -84,12 +89,13 @@ nav ul li:hover {
 
 nav ul li:hover > .border {
   background-image: linear-gradient(90deg, var(--lime-green), var(--bright-cyan));
+  width: 100%;
 }
 
 /* Button */
 
 .btn-request {
-  width: 160px;
+  width: 165px;
   height: 45px;
   border-radius: 30px;
   background-image: linear-gradient(90deg, var(--lime-green), var(--bright-cyan));
@@ -102,14 +108,14 @@ nav ul li:hover > .border {
 }
 
 .overlay-btn {
-  width: 160px;
+  width: 165px;
   height: 45px;
   border-radius: 30px;
   background-color: transparent;
   position: absolute;
   bottom: 0px;
   left: 0px;
-  transition: all 150ms ease-in;
+  transition: all 100ms ease-in;
 }
 
 .btn-request:hover > .overlay-btn,
@@ -119,6 +125,45 @@ nav ul li:hover > .border {
 
 /* Header */
 
+header {
+  height: 657px;
+  background-color: var(--very-light-gray);
+}
 
+header .container {
+  height: 657px;
+  position: relative;
+}
+
+.title-cta {
+  width: 446px;
+}
+
+.title-cta h1 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+  padding-top: 177px;
+  color: var(--dark-blue);
+}
+
+.title-cta p {
+  line-height: 26px;
+  margin-bottom: 37px;
+  color: var(--grayish-blue);
+}
+
+header .container .bg-intro-desktop {
+  position: relative;
+  top: -760px;
+  right: -460px;
+}
+
+.phones {
+  display: block;
+  position: absolute;
+  top: -120px;
+  right: -292px;
+}
 
 
