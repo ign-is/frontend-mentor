@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  /* ### Primary */
+
+ --dark-blue: hsl(233, 26%, 24%);
+ --lime-green: hsl(136, 65%, 51%);
+ --bright-cyan: hsl(192, 70%, 51%);
+
+  /* ### Neutral */
+
+ --grayish-blue: hsl(233, 8%, 62%);
+ --light-grayish-blue: hsl(220, 16%, 96%);
+ --very-light-gray: hsl(0, 0%, 98%);
+ --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: 18px;
+  background-color: red;
+}
+
+span {
+  font-family: "Public Sans", sans-serif;
+}
+
+.container {
+  width: 1110px;
+  height: fit-content;
+  overflow-x: visible;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Navbar Desktop */
+
+nav {
+  width: 100vw;
+  height: 80px;
+  background-color: var(--white);
+}
+
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+nav ul {
+  display: flex;
+  column-gap: 27px;
+  list-style: none;
+  color: var(--grayish-blue);
+}
+
+nav ul li {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+nav ul li .border {
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+nav ul li:hover {
+  color: var(--dark-blue);
+}
+
+nav ul li:hover > .border {
+  background-image: linear-gradient(90deg, var(--lime-green), var(--bright-cyan));
+}
+
+/* Button */
+
+.btn-request {
+  width: 160px;
+  height: 45px;
+  border-radius: 30px;
+  background-image: linear-gradient(90deg, var(--lime-green), var(--bright-cyan));
+  color: var(--white);
+  border: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.overlay-btn {
+  width: 160px;
+  height: 45px;
+  border-radius: 30px;
+  background-color: transparent;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  transition: all 150ms ease-in;
+}
+
+.btn-request:hover > .overlay-btn,
+.btn-request:focus > .overlay-btn {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Header */
+
+
+
+
