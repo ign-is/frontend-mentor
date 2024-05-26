@@ -25,6 +25,7 @@ body {
   font-family: "Public Sans", sans-serif;
   font-size: 18px;
   overflow: hidden;
+  height: fit-content;
 }
 
 span {
@@ -166,4 +167,67 @@ header .container .bg-intro-desktop {
   right: -292px;
 }
 
+/* Features Section */
+
+.features-section {
+  height: 667px;
+  /* width: 100vw; */
+  background-color: var(--light-grayish-blue);
+  /* background-color: red; */
+}
+
+.features-section .container {
+  height: 667px;
+}
+
+.features-section .container h2 {
+  color: var(--dark-blue);
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 26px;
+  padding-top: 108px;
+}
+
+.features-section .container > p:first-of-type {
+  width: 640px;
+  color: var(--grayish-blue);
+  line-height: 26px;
+  margin-bottom: 72px;
+}
+
+.features {
+  height: 270px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.benefit {
+  width: 265px;
+  height: 270px;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.benefit h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.benefit > img {
+  width: 74px;
+  height: 74px;
+  margin-bottom: 15px;
+}
+
+.benefit > p {
+  /* width: 250px; */
+  color: var(--grayish-blue);
+  font-size: 1rem;
+  line-height: 22px;
+}
 
