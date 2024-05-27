@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Nav from './components/Nav'
 import Header from './components/Header'
 import Features from './components/Features'
+import Articles from './components/Articles'
 import Footer from './components/Footer'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
@@ -15,6 +16,7 @@ function App() {
     <Nav />
     <Header />
     <Features />
+    <Articles />
     <Footer />
     </>
   )
