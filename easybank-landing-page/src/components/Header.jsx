@@ -5,7 +5,7 @@ import phones from "../assets/image-mockups.png";
 function Header() {
     return (
         <header>
-            <div className="container">
+            <div className="container-header">
                 <div className="title-cta">
                     <h1>Next generation digital banking</h1>
                     <p>

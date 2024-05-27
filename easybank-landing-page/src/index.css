@@ -24,7 +24,8 @@
 body {
   font-family: "Public Sans", sans-serif;
   font-size: 18px;
-  overflow: hidden;
+  /* overflow: hidden; */
+  overflow-x: hidden;
   height: fit-content;
 }
 
@@ -32,7 +33,18 @@ span {
   font-family: "Public Sans", sans-serif;
 }
 
-.container {
+/* .container {
+  width: 1110px;
+  height: fit-content;
+  overflow-x: visible;
+  margin-left: auto;
+  margin-right: auto;
+} */
+
+.container-nav,
+.container-header,
+.container-features,
+.container-footer {
   width: 1110px;
   height: fit-content;
   overflow-x: visible;
@@ -48,9 +60,10 @@ nav {
   background-color: var(--white);
   position: relative;
   z-index: 3;
+  /* margin-top: 30px; */
 }
 
-nav .container {
+nav .container-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -128,10 +141,12 @@ nav ul li:hover > .border {
 
 header {
   height: 657px;
+  /* width: 100%; */
   background-color: var(--very-light-gray);
+  /* margin-top: 30px; */
 }
 
-header .container {
+header .container-header {
   height: 657px;
   position: relative;
 }
@@ -143,44 +158,53 @@ header .container {
 .title-cta h1 {
   font-size: 3.5rem;
   font-weight: 300;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
+  padding-bottom: 20px;
   padding-top: 177px;
   color: var(--dark-blue);
 }
 
 .title-cta p {
   line-height: 26px;
-  margin-bottom: 37px;
+  /* margin-bottom: 37px; */
+  padding-bottom: 37px;
   color: var(--grayish-blue);
 }
 
-header .container .bg-intro-desktop {
-  position: relative;
-  top: -760px;
-  right: -460px;
+header .container-header .bg-intro-desktop {
+  /* position: relative; */
+  position: absolute;
+  /* top: -760px;
+  right: -460px; */
+  top: -260px;
+  right: -620px;
 }
 
 .phones {
-  display: block;
+  /* display: block; */
   position: absolute;
   top: -120px;
   right: -292px;
+  
+
+  z-index: 2;
 }
 
 /* Features Section */
 
 .features-section {
   height: 667px;
-  /* width: 100vw; */
   background-color: var(--light-grayish-blue);
-  /* background-color: red; */
+  width: 100vw;
+  position: relative;
 }
 
-.features-section .container {
+.features-section.container-features {
   height: 667px;
+  position: relative;
 }
 
-.features-section .container h2 {
+.features-section .container-features h2 {
   color: var(--dark-blue);
   font-size: 2.5rem;
   font-weight: 400;
@@ -188,7 +212,7 @@ header .container .bg-intro-desktop {
   padding-top: 108px;
 }
 
-.features-section .container > p:first-of-type {
+.features-section .container-features > p:first-of-type {
   width: 640px;
   color: var(--grayish-blue);
   line-height: 26px;
@@ -231,3 +255,89 @@ header .container .bg-intro-desktop {
   line-height: 22px;
 }
 
+/* Footer */
+footer {
+  height: 184px;
+  background-color: var(--dark-blue);
+  width: 100vw;
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  position: relative;
+  z-index: 5;
+  /* margin-bottom: -100px; */
+}
+
+footer .container-footer {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: red; */
+}
+
+footer h1 {
+  color: #ffffff;
+}
+
+footer .left {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+footer .left .social {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+}
+
+footer .left .social img {
+  cursor: pointer;
+}
+
+footer .left .social img:hover,
+footer .left .social img:focus {
+  filter: brightness(0) saturate(100%) invert(76%) sepia(7%) saturate(3664%) hue-rotate(105deg) brightness(83%) contrast(93%);
+}
+
+footer .center {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 122px;
+  margin-left: -140px;
+}
+
+footer .center ul {
+  list-style: none;
+  color: var(--white);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  font-size: 0.9rem;
+}
+
+footer .center ul > li {
+  cursor: pointer;
+}
+
+footer .center ul li:hover, 
+footer .center ul li:focus {
+  color: #2fc28e;
+  
+}
+
+footer .right {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+footer .right > p {
+  font-size: 0.9rem;
+  color: var(--grayish-blue);
+}

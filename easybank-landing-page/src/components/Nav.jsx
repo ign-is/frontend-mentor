@@ -4,7 +4,7 @@ import Button from '../components/Button';
 function Nav() {
     return (
         <nav>
-            <div className='container'>
+            <div className='container-nav'>
                 <img src={logo} alt="easybank logo" />
                 <ul>
                     <li>
