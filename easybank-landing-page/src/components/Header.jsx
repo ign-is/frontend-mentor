@@ -1,5 +1,6 @@
 import Button from "./Button";
 import introDesktop from "../assets/bg-intro-desktop.svg";
+import introMobile from '../assets/bg-intro-mobile.svg';
 import phones from "../assets/image-mockups.png";
 
 function Header() {
@@ -18,6 +19,11 @@ function Header() {
                     src={introDesktop} 
                     alt="colorful design"
                     className="bg-intro-desktop" 
+                />
+                <img 
+                    src={introMobile} 
+                    alt="colorful design"
+                    className="bg-intro-mobile" 
                 />
                 <img 
                     src={phones} 
