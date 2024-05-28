@@ -27,6 +27,7 @@ body {
   font-size: 18px;
   overflow-x: hidden;
   height: fit-content;
+  min-width: 375px;
 }
 
 span {
@@ -96,6 +97,12 @@ nav ul li:hover {
 nav ul li:hover > .border {
   background-image: linear-gradient(90deg, var(--lime-green), var(--bright-cyan));
   width: 100%;
+}
+
+.btn-toggle {
+  display: none;
+  cursor: pointer;
+  margin-right: 20px;
 }
 
 /* Button */
@@ -173,6 +180,9 @@ header .container-header .bg-intro-desktop {
 }
 
 .bg-intro-mobile {
+  position: absolute;
+  top: 0px;
+  left: 0px;
   display: none;
 }
 
@@ -265,8 +275,7 @@ article {
   width: 257px;
   height: 395px;
   background-color: var(--white);
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-radius: 8px;
 }
 
 article > img {
@@ -274,6 +283,7 @@ article > img {
   height: 200px;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
+  object-fit: cover;
 }
 
 article .bottom {
@@ -295,7 +305,8 @@ article .bottom h4 {
   transition: all 100ms ease-in;
 }
 
-article .bottom h4:hover {
+article .bottom h4:hover,
+article .bottom h4:focus {
   color: var(--lime-hover);
 }
 
@@ -409,7 +420,8 @@ footer .right > p {
     position: absolute;
     left: 0; 
     right: 0;
-    top: 90px; 
+    top: -300px;
+    /* top: 90px;  */
     margin-left: auto; 
     margin-right: auto; 
     height: 268px;
@@ -417,12 +429,17 @@ footer .right > p {
     flex-direction: column;
     padding: 30px;
     border-radius: 8px;
-    display: none;
+    transition: all 200ms ease-in;
+    /* display: none; */
   }
 
   nav ul li {
     font-size: 1.3rem;
     color: var(--dark-blue);
+  }
+
+  .btn-toggle {
+    display: block;
   }
 
   /* Header */
@@ -540,3 +557,4 @@ footer .right > p {
   }
 
 }
+

@@ -9,11 +9,11 @@ import Footer from './components/Footer'
 // import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [open, setOpen] = useState(false);
 
   return (
     <>
-    <Nav />
+    <Nav open={open} setOpen={setOpen}/>
     <Header />
     <Features />
     <Articles />
