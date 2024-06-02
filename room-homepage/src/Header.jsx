@@ -3,11 +3,16 @@ import angleLeft from './assets/icon-angle-left.svg'
 import angleRight from './assets/icon-angle-right.svg'
 import arrow from './assets/icon-arrow.svg'
 
-const Header = () => {
+const Header = ({open, setOpen}) => {
     return (
         <header>
             <div className="header-left">
-                <Nav />
+                <Nav open={open} setOpen={setOpen}/>
+                <div className="overlay" 
+                style={open ? 
+                {display: 'block', backgroundColor: 'rgba(0, 0, 0, 0.4)', zIndex: '2'} : 
+                {display: 'none', backgroundColor: 'rgba(0, 0, 0, 0)', zIndex: '-1'}}>
+                </div>
                 <div className='arrows'>
                     <div 
                         className="angle-left"
