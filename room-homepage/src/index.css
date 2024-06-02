@@ -305,3 +305,68 @@ nav > ul li {
 
 }
 
+@media screen and (max-width: 766px) {
+  body {
+    max-width: 375px;
+    
+  }
+
+  .arrows {
+    width: 112px;
+    height: 56px;
+  }
+
+  .angle-left,
+  .angle-right {
+    width: 56px;
+  }
+
+  header {
+    width: 375px;
+  }
+
+  .header-left {
+    height: 337px;
+    width: 375px;
+    background-position: left;
+  }
+
+  .header-right {
+    height: 412px;
+    width: 375px;
+    padding: 58px 0px 74px 34px;
+  }
+
+  .header-right h1 {
+    font-size: 2.3rem;
+  }
+
+  .header-right p {
+    width: 312px;
+    font-size: 1rem;
+  }
+
+  .about-left {
+    height: 240px;
+  }
+
+  .about-center {
+    height: 300px;
+    padding: 50px 0px 44px 32px;
+  }
+
+  .about-center h2 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .about-center p {
+    width: 328px;
+    font-size: 1rem;
+    line-height: 22px;
+  }
+
+  .about-right {
+    height: 230px;
+  }
+}
