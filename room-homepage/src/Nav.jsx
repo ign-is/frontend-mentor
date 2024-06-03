@@ -17,10 +17,22 @@ const Nav = ({open, setOpen}) => {
                 className='room-logo' 
             />
             <ul style={open ? {top: '0px'} : {top: '-110px'}}>
-                <li>home</li>
-                <li>shop</li>
-                <li>about</li>
-                <li>contact</li>
+                <li>
+                    <span>home</span>
+                    <div className="border"></div>    
+                </li>
+                <li>
+                    <span>shop</span>
+                    <div className="border"></div>    
+                </li>
+                <li>
+                    <span>about</span>
+                    <div className="border"></div>    
+                </li>
+                <li>
+                    <span>contact</span>
+                    <div className="border"></div>    
+                </li>
             </ul>
         </nav>
     )
