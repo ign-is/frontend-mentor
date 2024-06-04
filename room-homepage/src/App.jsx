@@ -7,7 +7,10 @@ function App() {
 
   return (
     <>
-      <Header open={open} setOpen={setOpen}/>
+      <Header 
+        open={open} 
+        setOpen={setOpen} 
+      />
       <About />
     </>
   )
