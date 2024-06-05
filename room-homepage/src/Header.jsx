@@ -44,6 +44,16 @@ const Header = ({open, setOpen}) => {
         }
     }
 
+    const keyDownEvent = (event) => {
+        if (event.code === "ArrowLeft") {
+            handleSlider(count - 1);
+        }
+
+        if (event.code === "ArrowRight") {
+            handleSlider(count + 1);
+        }
+    }
+
 
     const handleResize = () => {
         if (window.innerWidth <= 766) {
@@ -75,7 +85,9 @@ const Header = ({open, setOpen}) => {
                 <div className='arrows'>
                     <div 
                         className="angle-left"
-                        onClick={() => handleSlider(count - 1)}    
+                        onClick={() => handleSlider(count - 1)}  
+                        onKeyDown={keyDownEvent} 
+                        tabIndex={0}
                     >
                         <img 
                             src={angleLeft} 
@@ -84,7 +96,9 @@ const Header = ({open, setOpen}) => {
                     </div>
                     <div 
                         className="angle-right"
-                        onClick={() => handleSlider(count + 1)}    
+                        onClick={() => handleSlider(count + 1)}   
+                        onKeyDown={keyDownEvent} 
+                        tabIndex={0} 
                     >
                         <img 
                             src={angleRight}

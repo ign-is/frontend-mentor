@@ -17,19 +17,19 @@ const Nav = ({open, setOpen}) => {
                 className='room-logo' 
             />
             <ul style={open ? {top: '0px'} : {top: '-110px'}}>
-                <li>
+                <li tabIndex={1}>
                     <span>home</span>
                     <div className="border"></div>    
                 </li>
-                <li>
+                <li tabIndex={2}>
                     <span>shop</span>
                     <div className="border"></div>    
                 </li>
-                <li>
+                <li tabIndex={3}>
                     <span>about</span>
                     <div className="border"></div>    
                 </li>
-                <li>
+                <li tabIndex={4}>
                     <span>contact</span>
                     <div className="border"></div>    
                 </li>
